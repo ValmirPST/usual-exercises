@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Repetição</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h2>Desenvolvimento Web 1</h2>
+        <h2>Técnico Integrado em Informática para Internet</h2>
+        <h3>Valmir Paiva Stachin</h3>
+    </header>
+
+    <nav>
+        <a style="text-decoration: none; color: blue;" href="">
+            <h2 style="text-align: center; padding: 10px;">Exercícios</h2>
+        </a>
+        <button id="button1" onclick="showExercise('ex01', 'button1')">Exercicio 1</button>
+        <button id="button2" onclick="showExercise('ex02', 'button2')">Exercício 2</button>
+        <button id="button3" onclick="showExercise('ex03', 'button3')">Exercício 3</button>
+        <button id="button4" onclick="showExercise('ex04', 'button4')">Exercício 4</button>
+        <button id="button5" onclick="showExercise('ex05', 'button5')">Exercício 5</button>
+        <button id="button6" onclick="showExercise('ex06', 'button6')">Exercício 6</button>
+        <button id="button7" onclick="showExercise('ex07', 'button7')" style="border-bottom: 1px solid black;">Exercício 7</button>
+    </nav>
+
+        <!---------- exercício 01 ---------->
+
+    <main id="main">
+        <div class="exercise_div" id="ex01" style="display: none;">
+            <h2 style="margin-bottom: 10px;">Tabuada</h2>
+            <label for="number_ex01">Tabuada do número: </label>
+            <input id="number_ex01" type="number">
+            <button onclick="tabuada()">Mostrar</button>
+            <div id="table_ex01"></div>
+        </div>
+
+        <!---------- exercício 02 ---------->
+
+        <div class="exercise_div" id="ex02" style="display: none;">
+            <h2 style="margin-bottom: 10px;">Tabuada com Intervalo</h2>
+            <label for="number_ex02">Tabuada do número: </label>
+            <input id="number_ex02" type="number">
+            <label for="start">Início: </label>
+            <input id="start" type="number">
+            <label for="end">Fim: </label>
+            <input id="end" type="number">
+            <button onclick="tabuada02()">Mostrar</button>
+            <div id="table_ex02"></div>
+        </div>
+
+        <!---------- exercício 03 ---------->
+
+        <div class="exercise_div" id="ex03" style="display: none;">
+            <h2 style="margin-bottom: 10px;">Sequência de Fibonacci</h2>
+            <label for="n_fibonacci">Quantos números Fibonacci:</label>
+            <input id="n_fibonacci" type="number">
+            <button onclick="sequenceEx03()">Mostrar</button>
+            <div id="sequence_div"></div>
+        </div>
+
+        <!---------- exercício 04 ---------->
+
+        <div class="exercise_div" id="ex04" style="display: none;">
+            <h2 style="margin-bottom: 10px;">Dados para a Compra de um Carro</h2>
+            <label for="car_value">Valor do Carro</label>
+            <input id="car_value" type="number">
+            <button onclick="calcDadosCarro()">Calcular</button>
+            <div id="result_div"></div>
+        </div>
+
+        <!---------- exercício 05 ---------->
+
+        <div class="exercise_div" id="ex05" style="display: none;">
+            <h2 style="margin-bottom: 10px;">Encontrar Números Primos</h2>
+            <label for="n_primes">Quantos números Primos:</label>
+            <input id="n_primes" type="number">
+            <button onclick="findPrimes()">Mostrar</button>
+            <div id="primes_div"></div>
+        </div>
+
+        <!---------- exercício 06 ---------->
+
+        <div class="exercise_div" id="ex06" style="display: none;">
+            <h2 style="margin-bottom: 10px;">Sorteador de Números de 1 até N</h2>
+            <label for="max_number">Informe o número máximo</label>
+            <input id="max_number" type="number">
+            <button onclick="sortear()">Sortear</button>
+            <div id="number_div" style="font-size: 1.5rem;"></div>
+        </div>
+
+        <!---------- exercício 07 ---------->
+
+        <div class="exercise_div" id="ex07" style="display: none;">
+            <h2>Simulador de Juros Compostos</h2>
+            <div id="form_div">
+                <div class="input_container">
+                    <label for="capital">Valor Inicial</label>
+                    <input id="capital" type="number" placeholder="R$ 0,00">
+                </div>
+                <div class="input_container">
+                    <label for="monthly_value">Valor Mensal</label>
+                    <input id="monthly_value" type="number" placeholder="R$ 0,00">
+                </div>
+                <div class="input_container">
+                    <label for="interest_rate">Taxa de Juros</label>
+                    <div class="menu">
+                        <input id="interest_rate" type="number" placeholder="0,00%">
+                        <select name="" id="monthly_yearly_rate">
+                            <option value="monthly">Mensal</option>
+                            <option value="yearly">Anual</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="input_container">
+                    <label for="time">Período</label>
+                    <div class="menu">
+                        <input id="time" type="number" placeholder="0">
+                        <select name="" id="month_year_time">
+                            <option value="month_time">Meses</option>
+                            <option value="year_time">Anos</option>
+                        </select>
+                    </div>
+                </div>
+                <button onclick="calculate()">Calcular</button>
+                <button onclick="clear()">Limpar</button>
+            </div>
+            <div id="investment_result_div">
+                <h3>Valor Total Final</h3>
+                <h3>Valor Total Investido</h3>
+                <h3>Total em Juros</h3>
+                <div class="value" id="final_value_div"></div>
+                <div class="value" id="invested_value_div"></div>
+                <div class="value" id="total_interest_div"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Universidade Tecnológica Federal do Paraná - Câmpus Campo Mourão</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

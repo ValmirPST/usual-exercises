@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    height: 96.9vh;
+    margin: 10px;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 1fr;
+    grid-template-rows: 1fr 4.9fr 0.1fr;
+}
+
+header {
+    font-variant: small-caps;
+    height: 100px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    grid-column: 1/4;
+}
+
+nav {
+    border-right: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+nav > button {
+    list-style: none;
+    text-decoration: none;
+    font-size: large;
+    cursor: pointer;
+    padding: 15px;
+    background-color: transparent;
+    color: black;
+    border: 0;
+    border-top: 1px solid black;
+}
+
+nav > button:hover {
+    background-color: rgba(0, 0, 255, 0.25);
+    font-size: 1.2rem;
+    transition: 0.1s;
+}
+
+main {
+    grid-column: 2/4;
+    padding: 10px;
+    overflow: auto;
+}
+
+footer {
+    height: 50px;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1/4;
+}
+
+.exercise_div {
+    text-align: justify;
+    word-wrap: break-word;
+    overflow: auto;
+}
+
+.exercise_div input {
+    width: 100px;
+    padding: 0 0 0 2px;
+}
+
+.exercise_div button{
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+#ex07 > #form_div {
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+#ex07 .input_container {
+    display: flex;
+    flex-direction: column;
+}
+
+#ex07 input {
+    width: 80%;
+    padding: 5px 10px;
+}
+
+#ex07 button {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+#ex07 .menu {
+    display: flex;
+}
+
+#ex07 select {
+    margin-left: -1px;
+    margin-right: 20%;
+    padding-right: 28px;
+    font-size: 15px;
+    position: relative;
+}
+
+#ex07 #investment_result_div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+    margin-left: 4%;
+}
+
+#ex07 .value {
+    padding: 10px 10px 10px 0;
+    color: rgba(0, 0, 255, 1);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+}
